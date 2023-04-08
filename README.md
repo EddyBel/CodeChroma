@@ -39,6 +39,10 @@ The library allows users to highlight code syntax and color specific markdown el
 
 The library is simple to use and only requires installation and import.
 
+```bash
+pip install CodeChroma
+```
+
 The library allows you to color the text using only one method of the library for ease of use.
 
 ```python
@@ -73,6 +77,61 @@ colored_text = termcolor.coloring_text(text)
 # We can display the new text
 print(colored_text)
 ```
+
+## Configuration
+
+The library allows for a few extra settings, which allow the user to modify and color their text as needed.
+
+### Colors
+
+The colors can be easily modified from the parameters assigned when creating the instance of the TerminalColors class, you can write the available color you need for each colorable element.
+
+```python
+termcolor = TerminalColors(title="yellow", list_item="magenta", ...)
+```
+
+Another way to modify the colors of each element is from its elements attribute, for this it is necessary to pass some method either own of the library or personal (But it must be a method), that allows to color the text and to return the colored text.
+
+```python
+colors = Colors()
+termcolor = TerminalColors(title="yellow", list_item="magenta")
+termcolor.elements = {
+        "title": colors.bg_cyan,
+        "block": colors.yellow,
+        "list-item": colors.magenta,
+        "url": colors.cyan,
+        "parentheses": colors.light_red,
+        "string": colors.light_green,
+        "code": colors.yellow,
+        "lang": colors.red
+      }
+```
+
+### Format
+
+The TerminalColors class has some properties that modify how the string resulting from the coloring is displayed.
+
+One of them is the programming language, with the view_lang property (boolean value, by default it is set to True) allows to modify if the identified language will be shown or not.
+
+```python
+termcolor.view_lang = False
+```
+
+The following format_code modifies whether the code is returned with or without the markdown code block characters "````", by default it is set to True.
+
+```python
+termcolor.format_code = False
+```
+
+## Methods
+
+The TerminalColors class has some coloring methods as needed.
+
+| FUNCTION             | PARAMS   | DESCRIPTION                                                                                                                                                 |
+| -------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| coloring_text        | text:str | This function receives a text as a parameter and allows coloring the string with markdown formatting and features.                                          |
+| color_code           | code:str | This function allows you to pass a code as a string, the function will identify the language and color it according to its syntax if it finds the language. |
+| detect_code_language | code:str | This function also allows you to receive a code as a string and it will return a string with the language you identified in the code.                       |
 
 ## Licence
 

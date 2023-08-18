@@ -11,9 +11,9 @@
 <p align="center">Simple python text coloring package</p>
 
 <p aling="center" >
-<img src="./assets/Captura1.png" width="100%" />
-<img src="./assets/Captura2.png" width="100%" />
-<img src="./assets/Captura3.png" width="100%" />
+<img src="./assets/Preview_1.png" width="100%" />
+<img src="./assets/Preview_2.png" width="100%" />
+<img src="./assets/Preview_3.png" width="100%" />
 </p>
 
 The "CodeChroma" project is a Python library for highlighting and coloring text in the terminal. With this library, users can highlight code syntax and color specific markdown elements, such as titles, links, parentheses and text in quotation marks.
@@ -71,9 +71,9 @@ boolean verdaderoOFalso = true;
 '''
 """
 
-# We color the text with its method "coloring_text", the text passed by parameter
+# We color the text with its method "colorize_text", the text passed by parameter
 # The function returns a new string with the text already colored.
-colored_text = termcolor.coloring_text(text)
+colored_text = termcolor.colorize_text(text)
 # We can display the new text
 print(colored_text)
 ```

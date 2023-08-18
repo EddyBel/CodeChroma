@@ -129,8 +129,8 @@ The TerminalColors class has some coloring methods as needed.
 
 | FUNCTION             | PARAMS   | DESCRIPTION                                                                                                                                                 |
 | -------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| coloring_text        | text:str | This function receives a text as a parameter and allows coloring the string with markdown formatting and features.                                          |
-| color_code           | code:str | This function allows you to pass a code as a string, the function will identify the language and color it according to its syntax if it finds the language. |
+| colorize_text        | text:str | This function receives a text as a parameter and allows coloring the string with markdown formatting and features.                                          |
+| colorize_code           | code:str | This function allows you to pass a code as a string, the function will identify the language and color it according to its syntax if it finds the language. |
 | detect_code_language | code:str | This function also allows you to receive a code as a string and it will return a string with the language you identified in the code.                       |
 
 ## Licence
